@@ -43,19 +43,19 @@
 # Folder structure:
 
 Task1  
-|**001_Navigate_Shop_Page  
-|\_\_**test.py  
-|**002_Buy_Shop_Page  
-|\_\_\_\_**test.py  
+|_\_\001_Navigate_Shop_Page  
+|\_\_test.py  
+|_\_\002_Buy_Shop_Page  
+|\_\_\_\_test.py  
 |...  
-|** .gitignore  
+| .gitignore  
 | chromedriver  
 | PLANIT_SDET_TESTING_TASK1_TESTING_CASES.csv  
 | README.md  
 | [requirements.txt](/Task1/requirements.txt)  
 | [test.sh](/Task1/test.sh)  
 Task2  
-| **[challenge_002.py](/Task2/challenge_002.py)  
+| \_\_[challenge_002.py](/Task2/challenge_002.py)  
 | \_\_[challenge_006.py](/Task2/challenge_006.py)  
 | README.md
 
