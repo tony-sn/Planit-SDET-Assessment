@@ -1,5 +1,7 @@
 # **PLANIT-SDET-ASSESSMENT REPO**
 
+![alt test pass](/TEST_PASS.png)
+
 # Objective:
 
 - Solve challenges from Planit - SDET - Assessment.
@@ -27,7 +29,7 @@
 1. Clone or download the repo from GitHub.
 2. Setup environmental path, for Mac:  
    **sudo nano /etc/paths**  
-    enter local password, then add path of chromedriver at the end of the file, e.g: _/Users/username/GitHub/Planit-SDET-Assessment/Task1/chromedriver_  
+    enter local password, then add path of chromedriver at the end of the file, e.g: _/Users/username/Documents/GitHub/Planit-SDET-Assessment/Task1/chromedriver_  
    Type **Y** then **Ctrl+C** to save
 3. Setup Python virtual environment:  
    **python3 -m venv env**  
