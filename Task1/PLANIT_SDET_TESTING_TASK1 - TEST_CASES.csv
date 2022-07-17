@@ -1,0 +1,117 @@
+Project Name,Jupiter Shopping Cart,,,,,,
+Created By,Tony Nguyen,,,,,,
+Created Date,15-07-2022,,,,,,
+Reviewed By,Planit Director,,,,,,
+,,,,,,,
+Test Case ID — to identify the case in question,,,,,,,
+Description — summarizes the objective of the test case,,,,,,,
+Prerequisites — the “ingredients” or “pre-existing conditions” before you can run the test,,,,,,,
+Test Steps — each action taken during the test,,,,,,,
+Test Data — all of the information that is related to the test case,,,,,,,
+Expected Results — what you expect to happen if the test passes,,,,,,,
+Actual Results — what actually happens when you run the test,,,,,,,
+Pass/Fail — an analysis which determines if the test results verify the particular actions taken,,,,,,,
+,,,,,,,
+Test Case ID,Description,Prerequisites,Test Steps,Test Data,Expected Results,Actual Results,PASS / FAIL
+Navigate_Shopping_Page_001,"Verify User can navigate 
+to Shopping page",User is at Home page,"- User click Start Shopping button 
+/ Shop link item at Navbar
+- Navigation URL match /shop path","- Navigation bar URL at start:
+https://jupiter.cloud.planittesting.com/#/home
+- Navigation bar URL at the end:
+https://jupiter.cloud.planittesting.com/#/shop","User is at Shopping page
+after the click",User is at Shopping page,PASS
+Buy_Shopping_Page_002,"Verify User can click Buy button to add
+an item to shopping cart",User is at Shopping page,"- User click Buy button on an item
+- Cart update","- Cart before click (0)
+- Cart after click (1)",Shopping cart is updated,Shopping cart is updated,PASS
+Navigate_Login_Panel_003,Verify User can navigate to Login panel,User is at Home page,"- User click Login link
+- Login modal appears","- Navigation bar URL at start:
+https://jupiter.cloud.planittesting.com/#/
+- Login link","User is at Login panel
+after the click","User is at Login panel
+after the click",PASS
+Navigate_Cart_Page_004,Verify User can navigate to Cart page,"- User is at Shopping page
+- User is at Home page","- User click Cart link
+- Navigation URL match cart path","- Navigation bar URL at start:
+https://jupiter.cloud.planittesting.com/#/home
+https://jupiter.cloud.planittesting.com/#/shop
+
+- Navigation bar URL at the end:
+https://jupiter.cloud.planitesting.com/#/cart","User is at Cart page
+after the click",User is at Cart page,PASS
+Edit_Item_Cart_Page_005,"Verify User can change the quantity number
+at Cart page","- User is at Cart page
+- There is an item in cart","- User click up arrow to increase quantity
+- User click down arrow to decrease quantity
+- Quantity will change and stop at 1 item","- Cart before click increase arrow(1)
+- Cart after click (2)
+- Cart after click decrease arrow (1)",Cart number can properly changed,Cart number can properly change,PASS
+,Verify User can delete an item at Cart page,"- User is at Cart page
+- There is an item in cart","- User click remove Item
+- User choose Yes
+- Item is deleted, cart is empty
+- Start Shopping button appear","- Cart before click Remove (1)
+- Cart after click Remove (0)","User can remove an item
+from cart","User can remove an item
+from cart",PASS
+Empty_Cart_006,Verify User can empty cart at Cart page,"- User is at Cart page
+- There is at least 1 item in cart,
+ideally there are 2 items","- User click Empty Cart
+- User choose Yes
+- Cart is empty, there is no item","- Cart before click Empty cart (2)
+- Cart after click Empty cart (0)",User can empty the shopping cart,User can empty the shopping cart,PASS
+Navigate_Checkout_Page_007,Verify User can navigate to Checkout page,"- User is at Cart page
+- The cart is not empty","- User click Checkout button
+- User choose Yes
+- Navigation URL match /checkout path","- Navigation bar URL at start:
+https://jupiter.cloud.planitesting.com/#/cart
+
+- Navigation bar URL at end:
+https://jupiter.cloud.planitesting.com/#/checkout",User is at Checkout page,User is at Checkout page,PASS
+Form_Checkout_Page_008,Verify User can submit a checkout order,"- User is at Checkout page
+- User finishes all input fields","- User fill in all fields
+- User click Submit button
+- Order submitted successfully with
+feedback notification","- Fields enter:
+Forename: ""John"" (required)
+Surname: Nguyen
+Email:john@gmail.com (required)
+Telephone: 0400100100
+Address: 101 Example Road
+Card Type: Visa (required)
+Card Number: 9211 4030 6868 (required)","User received alert order submitted successfully
+Cart is empty
+User is welcome with Shop Again button","User received alert order submitted successfully
+Cart is empty
+User is welcome with Shop Again button",PASS
+Navigate_Contact_Page_009,Verify User can navigate to Contact page,User is at Home page,"- User click Contact link
+- Navigation URL match /contact path","- URL at start:
+https://jupiter.clound.planittesting.com
+- URL at the end:
+https://jupiter.clound.planittesting.com/#/contact","User is at Contact page
+after clicking the link","User is at Contact page
+after clicking the link",PASS
+Form_Contact_Page_010,"Verify User can submit a feedback
+from Contact page","- User is at Contact page
+- User finish all input fields","- User fill in the form
+- Form submitted successfully.","- Fields enter:
+Forename: ""John"" (required)
+Surname: Nguyen
+Email:john@gmail.com (required)
+Telephone: 0400100100
+Message: ""This is a feedback"" (required)",User received feedback submitted alert,User received feedback submitted alert,PASS
+,"Verify User cannot submit a feedback
+if the form is incomplete",User is at Contact page,"- User fill in the form
+- User left some required fields incomplete.","- Fields enter:
+Forename: _blank
+Surname: Nguyen
+Email:john@gmail.com (required)
+Telephone: 0400100100
+Message: _blank","-User cannot submit form
+- User receive warning for
+ leaving required fields blank",User cannot submit form,FAIL
+API_Shopping_Page_011,Verify web renders products from API,"- User is at Home page
+- User navigate to /shop page","- User click Shop link
+- Web renders products from backend","- There are 9-10 items when User is at
+/shop path",- User can see products,- User can see products,PASS
