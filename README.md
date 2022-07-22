@@ -51,10 +51,10 @@
 # Folder structure:
 
 Task1  
-|** 001_Navigate_Shop_Page  
-|\_\_** test.py  
-|** 002_Buy_Shop_Page  
-|\_\_** test.py  
+|__ 001_Navigate_Shop_Page  
+|\_\___ test.py  
+|__ 002_Buy_Shop_Page  
+|\_\___ test.py  
 |...  
 | .gitignore  
 | chromedriver  
@@ -63,8 +63,8 @@ Task1
 | [requirements.txt](/Task1/requirements.txt)  
 | [test.sh](/Task1/test.sh)  
 Task2  
-|** [challenge_002.py](/Task2/challenge_002.py)  
-|** [challenge_006.py](/Task2/challenge_006.py)  
+|__ [challenge_002.py](/Task2/challenge_002.py)  
+|__ [challenge_006.py](/Task2/challenge_006.py)  
 | README.md
 
 # Acknowledgement:
