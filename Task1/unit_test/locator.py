@@ -14,7 +14,10 @@ class ShopPageLocators(object):
     CART = (By.ID, 'nav-cart')
     CART_COUNT = (By.XPATH, '//span[@class=\'cart-count ng-binding\']')
 
-    
 class CartPageLocators(object):
     CART_QUANTITY = (By.CLASS_NAME, 'input-mini')
     CART_COUNT = (By.XPATH, '//span[@class=\'cart-count ng-binding\']')
+    CART_EMPTY = (By.XPATH, '//a[@class=\'btn btn-danger ng-scope\']')
+    CART_YES_OPTION = (By.XPATH, "//a[@class='btn btn-success']")
+    CART_SHOPPING_BUTTON = (By.PARTIAL_LINK_TEXT, 'Shopping')
+
