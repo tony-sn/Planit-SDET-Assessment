@@ -43,7 +43,7 @@
    --UPDATE--  
    **Unit Test is now ready!**
 
-- After get into Python Virtual Environment: locate to unit\*test directory, e.g:  
+- After get into Python Virtual Environment: locate to 'unittest' directory, e.g:  
   _/Users/username/Documents/GitHub/Planit-SDET-Assessment/Task1/unittest_
 - Run at CLI:  
   **python3 -m main.py -v**
@@ -51,10 +51,10 @@
 # Folder structure:
 
 Task1  
-|__ 001_Navigate_Shop_Page  
-|____ test.py  
-|__ 002_Buy_Shop_Page  
-|____ test.py  
+|** 001_Navigate_Shop_Page  
+|\_\_** test.py  
+|** 002_Buy_Shop_Page  
+|\_\_** test.py  
 |...  
 | .gitignore  
 | chromedriver  
@@ -63,8 +63,8 @@ Task1
 | [requirements.txt](/Task1/requirements.txt)  
 | [test.sh](/Task1/test.sh)  
 Task2  
-|__ [challenge_002.py](/Task2/challenge_002.py)  
-|__ [challenge_006.py](/Task2/challenge_006.py)  
+|** [challenge_002.py](/Task2/challenge_002.py)  
+|** [challenge_006.py](/Task2/challenge_006.py)  
 | README.md
 
 # Acknowledgement:
