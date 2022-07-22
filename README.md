@@ -1,6 +1,7 @@
 # **PLANIT-SDET-ASSESSMENT REPO**
 
-![alt test pass](/TEST_PASS.png)
+![alt test pass](/TEST_PASS.png)  
+![alt unit test](/UNIT_TEST.png)
 
 # Objective:
 
@@ -38,7 +39,14 @@
    **source env/bin/activate**  
    Deactivate a venv, at CLI run: **deactivate**
 4. To install all dependencies, at CLI run: **python3 -m pip install -r requirements.txt**
-5. At CLI, run **./tesh.sh** (an optimised shell script to run all 10 test cases)
+5. At CLI, run **./tesh.sh** (an optimised shell script to run all 10 test cases)  
+   --UPDATE--  
+   **Unit Test is now ready!**
+
+- After get into Python Virtual Environment: locate to unit\*test directory, e.g:  
+  _/Users/username/Documents/GitHub/Planit-SDET-Assessment/Task1/unittest_
+- Run at CLI:  
+  **python3 -m main.py -v**
 
 # Folder structure:
 
