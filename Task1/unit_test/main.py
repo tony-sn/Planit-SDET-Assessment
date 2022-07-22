@@ -89,7 +89,7 @@ class JupiterToys (unittest.TestCase):
         contactPage.fill_form_fields()
 
     def tearDown(self):
-        time.sleep(2)
+        time.sleep(1)
         self.driver.close()
         self.driver.quit()
 
