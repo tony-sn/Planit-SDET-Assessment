@@ -36,8 +36,7 @@ class JupiterToys (unittest.TestCase):
     def test_003_Click_Login_Link(self):
         homePage = page.HomePage(self.driver)
         homePage.click_login_button()
-        login_modal = homePage.check_login_modal()
-        assert login_modal.is_displayed()
+        assert homePage.check_login_modal().is_displayed()
 
     def test_004_Navigate_Cart_Page(self):
         self.driver.get(SHOP_LINK)
@@ -48,28 +47,46 @@ class JupiterToys (unittest.TestCase):
     def test_005_Edit_Item_Cart_Page(self):
         self.driver.get(SHOP_LINK)
         shopPage = page.ShopPage(self.driver)
-        shopPage.click_buy_button()
-        shopPage.click_cart_button()
+        shopPage.navigate_cart_page()
         cartPage = page.CartPage(self.driver)
         cartPage.edit_cart()
-        cart_count = int(cartPage.check_cart().text)
-        assert (cart_count == 2)
+        assert (int(cartPage.check_cart().text) == 2)
 
     def test_006_Empty_Cart(self):
         self.driver.get(SHOP_LINK)
         shopPage = page.ShopPage(self.driver)
-        shopPage.click_buy_button()
-        shopPage.click_cart_button()
+        shopPage.navigate_cart_page()
         cartPage = page.CartPage(self.driver)
-        cartPage.click_empty_cart()
         cartPage.confirm_empty_cart()
-        cart_shopping_button = cartPage.check_cart_empty()
-        assert(cart_shopping_button.is_displayed())
+        assert(cartPage.check_cart_empty().is_displayed())
+
+    def test_007_Navigate_Checkout_Page(self):
+        self.driver.get(SHOP_LINK)
+        shopPage = page.ShopPage(self.driver)
+        shopPage.navigate_cart_page()
+        cartPage = page.CartPage(self.driver)
+        cartPage.click_checkout_button()
+        assert(self.driver.current_url == CHECKOUT_LINK)
+
+    def test_008_Form_Checkout_Page(self):
+        self.driver.get(SHOP_LINK)
+        shopPage = page.ShopPage(self.driver)
+        shopPage.navigate_cart_page()
+        cartPage = page.CartPage(self.driver)
+        cartPage.click_checkout_button()
+        checkoutPage = page.CheckoutPage(self.driver)
+        checkoutPage.fill_form_fields()
 
     def test_009_Navigate_Contact_Page(self):
         homePage = page.HomePage(self.driver)
         homePage.click_contact_button()
         assert self.driver.current_url == CONTACT_LINK
+
+    def test_010_Form_Contact_Page(self):
+        homePage = page.HomePage(self.driver)
+        homePage.click_contact_button()
+        contactPage = page.ContactPage(self.driver)
+        contactPage.fill_form_fields()
 
     def tearDown(self):
         time.sleep(2)
